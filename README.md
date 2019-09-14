@@ -26,9 +26,12 @@ Let's look at how to define and call a simple function in Ao:
 This is ported into a JSON array:
 
 ```javascript
-[ [ "defun", "foo", [ "a", "b" ], 
-	[ "print", [ "concat", "a", "' '", "b" ] ] ],
-  [ "foo", 123, 456 ] ]
+[
+    ["defun", "foo", ["a", "b"],
+        ["print", ["concat", "a", "' '", "b"]]
+    ],
+    ["foo", 123, "'456'"]
+]
 ````
 
 Then the Ao (Javascript) engine executes these instructions and prints:

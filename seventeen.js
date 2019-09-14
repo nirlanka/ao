@@ -12,7 +12,7 @@ const __inp = `
 	(print (~ txt ' ' txt)))
  (test 'haha')
  (defun test2 (txt)
-	(~ txt ' ' txt))
+	(~ txt ' ' txt '456' 123))
  (print (test2 'haha'))
  (print (1 2 3))
  (print (* 333 11))
