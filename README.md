@@ -136,7 +136,7 @@ Which prints:
 8
 ```
 
-As a functional language, Ao fundementally supports tail recursion as a form of looping. But it's usually blocked at around 700 iterations by the Javascript engine, due to overuse of the stack by the current implementation of the language.
+As a functional language, Ao fundementally supports tail recursion as a form of looping. But it's usually blocked at around 700 iterations by the Javascript engine, due to overuse of the stack by the current implementation of the Ao engine.
 
 ```scheme
 ((defun rec-fn (txt count)
