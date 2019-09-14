@@ -115,9 +115,15 @@ Let's look at a range iteration:
 The above translates to
 
 ```javascript
-[ [ 'defun', 'cube', [ 'x' ], [ 'multiply', 'x', 'x', 'x' ] ],
-  [ 'defun', 'print_cube', [ 'x' ], [ 'print', [Array] ] ],
-  [ 'for_each', [ 'range', -2, 2 ], 'print_cube' ] ]
+[
+    ["defun", "cube", ["x"],
+        ["multiply", "x", "x", "x"]
+    ],
+    ["defun", "print_cube", ["x"],
+        ["print", ["cube", "x"]]
+    ],
+    ["for_each", ["range", -2, 2], "print_cube"]
+]
 ````
 
 Which prints:
