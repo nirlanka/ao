@@ -1,6 +1,9 @@
 凹 (Āo) 
 =======
 
+[![Experimental](https://img.shields.io/badge/status-experimental-blue.svg)](https://shields.io/)
+[![NPM availability: not available yet](https://img.shields.io/badge/npm-pending-orange.svg)](https://shields.io/)
+
 Ao is an attempt at creating a Lisp-like programming language with Javascript using a syntax tree built on JSON arrays.
 
 ## Lisp?
