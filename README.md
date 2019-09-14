@@ -182,6 +182,8 @@ done
 
 This is not yet complete. To make Ao more like Lisp, and give it its full potential with metaprogramming (code changing itself), array/list manipulation methods are needed. I'm working on adding these, as well as optimizing and simplifying the source code of Ao.
 
-I am also planning on creating a CLI version of Ao, available on npm and GitHub npm, though the language so far has no practical ability to be used like that.
+~I am also planning on creating a CLI version of Ao, available on npm and GitHub npm, though the language so far has no practical ability to be used like that.~
+
+Recursion is limited to around 700 iterations due to stack limitations and inefficiency of this implementation of Ao.
 
 Feel free to add your suggestions and feedback as issues. I'd love to discuss about the philosophy of Lisp and metaprogramming as well as any short-sight I may be making.
