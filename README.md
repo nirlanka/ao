@@ -20,7 +20,7 @@ Let's look at how to define and call a simple function in Ao:
 ```scheme
 ((defun foo (a b)
 	(print (~ a ' ' b)))
-(foo 123 '456'))
+ (foo 123 '456'))
 ```
 
 This is ported into a JSON array:
@@ -60,8 +60,9 @@ This translates to:
 Only `if-else` syntax is implemented as of now. For more complex `if-elseif-elseif-...-else`, code needs to be nested under `if-else` at the moment.
 
 ```scheme
-((defun cube (x) (* x x x))
-(if (== (cube -3) -27)
+((defun cube (x) 
+	(* x x x))
+ (if (== (cube -3) -27)
 	((print (cube -3))
 	 (print 'Correct! :)'))
 	((print (cube -3))
@@ -97,12 +98,12 @@ For now, only a range loop is possible, as `for-each`. Since there is no variabl
 
 Let's look at a range iteration:
 
-```
+```scheme
 ((defun cube (x)
 	(* x x x))
-(defun print-cube (x)
+ (defun print-cube (x)
 	(print (cube x)))
-(for-each (range -2 2) print-cube))
+ (for-each (range -2 2) print-cube))
 ```
 
 The above translates to
