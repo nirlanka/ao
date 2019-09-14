@@ -130,6 +130,48 @@ Which prints:
 8
 ```
 
+As a functional language, Ao fundementally supports tail recursion as a form of looping. But it's usually blocked at around 700 iterations by the Javascript engine, due to overuse of the stack by the current implementation of the language.
+
+```scheme
+((defun rec-fn (txt count)
+ 	(if (== count 700)
+ 		(print 'done')
+ 		((print (~ txt ' ' count))
+ 		 (rec-fn (~ count ' + ' 1 ' =') (+ count 1)))))
+ (rec-fn 'starting' 0))
+ ```
+ 
+ ```javascript
+ [
+    ["defun", "rec_fn", ["txt", "count"],
+        ["if", ["equals", "count", 700],
+            ["print", "'done'"],
+            [
+                ["print", ["concat", "txt", "' '", "count"]],
+                ["rec_fn", ["concat", "count", "' + '", 1, "' ='"],
+                    ["add", "count", 1]
+                ]
+            ]
+        ]
+    ],
+    ["rec_fn", "'starting'", 0]
+]
+ ```
+ 
+ ```
+starting 0
+0 + 1 = 1
+1 + 1 = 2
+2 + 1 = 3
+3 + 1 = 4
+4 + 1 = 5
+...
+696 + 1 = 697
+697 + 1 = 698
+698 + 1 = 699
+done
+ ```
+
 ## Plans
 
 This is not yet complete. To make Ao more like Lisp, and give it its full potential with metaprogramming (code changing itself), array/list manipulation methods are needed. I'm working on adding these, as well as optimizing and simplifying the source code of Ao.
