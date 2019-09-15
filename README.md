@@ -14,6 +14,15 @@ On the other hand, Javascript and JSON employs one of the most dynamic and non-r
 
 When you run this Javascript file through NodeJS, or open the HTML file and look at the browser console, you will see that the execution happens on a JSON array that was created from the original syntax.
 
+## How to test
+
+Clone this repository first. Then, either,
+
+- The easiest way is to just run the Javascript file in NodeJS as `node seventeen`.
+- Otherwise, open the `index.html` in a browser (Chrome/FireFox). Then open the browser developer tools to see the console output.
+
+Change the Ao code in the Javascript file to test your own Ao code.
+
 ## Examples
 
 ### Function definition
